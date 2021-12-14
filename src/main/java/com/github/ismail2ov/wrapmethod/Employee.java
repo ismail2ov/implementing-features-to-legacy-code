@@ -13,6 +13,15 @@ public final class Employee {
     private final Date date;
 
     public void pay() {
+        logPayment();
+        dispatchPayment();
+    }
+
+    private void logPayment() {
+//        this.logger.log(this);
+    }
+
+    private void dispatchPayment() {
         PayService payService = PayService.getInstance();
         PayDispatcher payDispatcher = PayDispatcher.getInstance();
         Money amount = new Money();
