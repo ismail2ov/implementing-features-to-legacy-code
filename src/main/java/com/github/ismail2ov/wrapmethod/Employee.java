@@ -23,4 +23,13 @@ public final class Employee {
         }
         payDispatcher.pay(this, date, amount);
     }
+
+    public void makeLoggedPayment() {
+        logPayment();
+        pay();
+    }
+
+    private void logPayment() {
+//        this.logger.log(this);
+    }
 }
