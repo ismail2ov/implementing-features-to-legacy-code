@@ -23,6 +23,8 @@ public class QuarterlyReportGenerator {
         pageText.append("<table>");
 
         if (results.size() != 0) {
+            pageText.append("<tr><td>Department</td><td>Manager</td><td>Profit</td><td>Expenses</td></tr>");
+
             for (Result item : results) {
                 pageText.append("<tr>");
                 pageText.append("<td>").append(item.getDepartment()).append("</td>");
