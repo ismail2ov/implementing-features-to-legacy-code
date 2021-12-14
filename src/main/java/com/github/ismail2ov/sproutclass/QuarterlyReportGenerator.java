@@ -23,6 +23,9 @@ public class QuarterlyReportGenerator {
         pageText.append("<table>");
 
         if (results.size() != 0) {
+            QuarterlyReportTableHeaderProducer producer = new QuarterlyReportTableHeaderProducer();
+            pageText.append(producer.makeHeader());
+
             for (Result item : results) {
                 pageText.append("<tr>");
                 pageText.append("<td>").append(item.getDepartment()).append("</td>");
